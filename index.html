@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Souad - Développeuse Web</title>
+    <style>
+        /* === DEBUT DU CSS === */
+        body {
+            background-color: beige;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .titre-principal {
+            color: #ff69b4;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-family: 'Georgia', serif;
+            letter-spacing: 2px;
+        }
+
+        .sous-titre {
+            color: orange;
+            text-align: center;
+        }
+
+        .paragraphe {
+            color: brown;
+        }
+
+        .image-centree {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-centree img {
+            border: 3px solid purple;
+            border-radius: 15px;
+        }
+
+        .galerie {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .hobby {
+            margin: 10px;
+        }
+
+        .hobby img {
+            border-radius: 10px;
+        }
+
+        .hobby p {
+            color: purple;
+            font-weight: bold;
+        }
+
+        .carte {
+            background-color: white;
+            border: 3px solid pink;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            text-align: center;
+            max-width: 500px;
+        }
+
+        .formulaire {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .champ-formulaire {
+            margin-bottom: 15px;
+        }
+
+        .champ-formulaire label {
+            display: block;
+            color: purple;
+            margin-bottom: 5px;
+        }
+
+        .champ-formulaire input,
+        .champ-formulaire textarea {
+            width: 100%;
+            padding: 8px;
+            border: 2px solid pink;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .champ-formulaire textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .bouton {
+            background-color: pink;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .bouton:hover {
+            background-color: #ff69b4;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .titre-principal {
+                font-size: 24px;
+                letter-spacing: 1px;
+            }
+            
+            .sous-titre {
+                font-size: 20px;
+            }
+            
+            .galerie {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hobby {
+                margin: 20px 0;
+            }
+            
+            .hobby img {
+                width: 200px;
+            }
+            
+            .carte {
+                margin: 10px;
+                padding: 15px;
+            }
+            
+            .formulaire {
+                margin: 10px;
+                padding: 15px;
+            }
+            
+            .bouton {
+                padding: 12px 20px;
+                font-size: 16px;
+            }
+        }
+        /* === FIN DU CSS === */
+    </style>
+</head>
+<body>
+    <!-- === DEBUT DU HTML === -->
+    <h1 class="titre-principal">Bienvenue sur la page de Souad !</h1>
+
+    <div class="image-centree">
+      <img src="https://placehold.co/300x200/9370db/white?text=Cinéma" alt="Cinéma" width="300">
+    </div>
+
+    <h2 class="sous-titre">Mes hobbies préférés</h2>
+
+    <div class="galerie">
+      <div class="hobby">
+        <img src="https://placehold.co/150x150/ff69b4/white?text=Cinéma" alt="Hobby 1" width="150">
+        <p>cinéma</p>
+      </div>
+      <div class="hobby">
+        <img src="https://placehold.co/150x150/4ecdc4/white?text=Danse" alt="Hobby 2" width="150">
+        <p>danse</p>
+      </div>
+      <div class="hobby">
+        <img src="https://placehold.co/150x150/9370db/white?text=Musique" alt="Hobby 3" width="150">
+        <p>musique</p>
+      </div>
+    </div>
+
+    <h2 class="sous-titre">Mes sites préférés</h2>
+    <p class="paragraphe">Regarder des vidéos : <a href="https://www.youtube.com" target="_blank">YouTube</a></p>
+    <p class="paragraphe">Écouter de la musique : <a href="https://www.spotify.com" target="_blank">Spotify</a></p>
+    <p class="paragraphe">Regarder des films : <a href="https://www.netflix.com" target="_blank">Netflix</a></p>
+
+    <div class="carte">
+      <h3>À propos de moi</h3>
+      <p>Je m'appelle <strong>Souad</strong> et j'apprends le développement web !</p>
+      <p>Mes passions : cinéma, danse et musique</p>
+    </div>
+
+    <h2 class="sous-titre">Contacte-moi !</h2>
+
+    <form class="formulaire">
+      <div class="champ-formulaire">
+        <label for="prenom">Ton prénom :</label>
+        <input type="text" id="prenom" name="prenom">
+      </div>
+      
+      <div class="champ-formulaire">
+        <label for="email">Ton email :</label>
+        <input type="email" id="email" name="email">
+      </div>
+      
+      <div class="champ-formulaire">
+        <label for="message">Ton message :</label>
+        <textarea id="message" name="message"></textarea>
+      </div>
+      
+      <button type="submit" class="bouton">Envoyer le message</button>
+    </form>
+
+    <script>
+    // === DEBUT DU JAVASCRIPT ===
+    document.querySelector('.bouton').addEventListener('click', function(e) {
+        e.preventDefault();
+        alert('🎉 Message envoyé ! Merci pour ton message Souad !');
+        document.querySelector('.formulaire').reset();
+    });
+    // === FIN DU JAVASCRIPT ===
+    </script>
+</body>
+</html>
